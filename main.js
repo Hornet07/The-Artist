@@ -1,12 +1,13 @@
 // ==UserScript==
-// @name         Misak-ı Milli
+// @name         The-Artist
+// @description  Cock and balls
 // @namespace    http://tampermonkey.net/
-// @version      0.3
-// @description  Misak-ı milli
-// @author       Thanks Jared.
+// @version      0.69
+// @author       Thanks Jared and sust4in. Hornet#0046
 // @match        https://hot-potato.reddit.com/embed*
-// @updateURL    https://gist.githubusercontent.com/sust4in/372cf01b2c7cbea79c6e69ecf53e6e48/raw/fa6765ab542724bc962b2635d36c597ff16c8c55/misakimilli.js
-// @downloadURL  https://gist.githubusercontent.com/sust4in/372cf01b2c7cbea79c6e69ecf53e6e48/raw/fa6765ab542724bc962b2635d36c597ff16c8c55/misakimilli.js
+// @downloadURL  https://raw.githubusercontent.com/Hornet07/The-Artist/main/main.js
+// @updateURL    https://raw.githubusercontent.com/Hornet07/The-Artist/main/main.js
 // @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
+
