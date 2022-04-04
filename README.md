@@ -8,10 +8,10 @@ Status: Complete
 Status: Broken  
 **Bot Code:** main.js
 
-# How to use the bot code:
-1. Get the Tampermonkey extension for your browser
-2. Copy and paste main.js into a new script in Tampermonkey
-2.1 Create a GitHub Gist with the name *main.user.js* and share the raw link with others for the other people
-3. Refresh r/place
+# How to use the bot code:  
+1. Get the Tampermonkey extension for your browser  
+2. Copy and paste main.js into a new script in Tampermonkey  
+2.1 Create a GitHub Gist with the name *main.user.js* and share the raw link with others for the other people  
+3. Refresh r/place  
 
-Bot only sometimes works for now, needs attention.
+Bot only sometimes works for now, needs attention.  
