@@ -1,6 +1,6 @@
 # The-Artist
 
-Status: Complete
+Status: Complete  
 **Image Generator Code:** main.cpp  
 **Image Generator Executables:** linux_binary_executable, do not have a windows version yet ;(  
 **Image Generator Example Output:** From placeturkeywtext.png to placeturkeywtext.png.txt  
