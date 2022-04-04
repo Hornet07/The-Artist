@@ -9,36 +9,45 @@
 // @updateURL    https://raw.githubusercontent.com/Hornet07/The-Artist/main/main.js
 // @grant        GM_xmlhttpRequest
 // @connect      raw.githubusercontent.com
+// @connect      hornet07.github.io
 // ==/UserScript==
 
 (function () {
     "use strict";
 
     const colorMap = {
-        "#BE0039": 1, //(Dark red)
-        "#FF4500": 2, //(Red)
-        "#FFA800": 3, //(Orange)
-        "#FFD635": 4, //(Yellow)
-        "#00A368": 5, //(Dark green)
-        "#00CC78": 6, //(Hreen)
-        "#7EED56": 7, //(Light green)
-        "#00756F": 8, //(Dark teal)
-        "#009EAA": 9, //(Teal)
-        "#2450A4": 10, //(Dark blue)
-        "#3690EA": 11, //(Blue)
-        "#51E9F4": 12, //(Light blue)
-        "#493AC1": 13, //(Indigo)
-        "#6A5CFF": 14, //(Periwinkle)
-        "#811E9F": 15, //(Dark purple)
-        "#B44AC0": 16, //(Purple)
-        "#FF3881": 17, //(Pink)
-        "#FF99AA": 18, //(Light pink)
-        "#6D482F": 19, //(Dark brown)
-        "#9C6926": 20, //(Brown)
-        "#000000": 21, //(Black)
-        "#898D90": 22, //(Gray)
-        "#D4D7D9": 23, //(Light gray)
-        "#FFFFFF": 24, //(White)
+        '#6D001A': 0,
+        '#BE0039': 1,
+        '#FF4500': 2,
+        '#FFA800': 3,
+        '#FFD635': 4,
+        '#FFF8B8': 5,
+        '#00A368': 6,
+        '#00CC78': 7,
+        '#7EED56': 8,
+        '#00756F': 9,
+        '#009EAA': 10,
+        '#00CCC0': 11,
+        '#2450A4': 12,
+        '#3690EA': 13,
+        '#51E9F4': 14,
+        '#493AC1': 15,
+        '#6A5CFF': 16,
+        '#94B3FF': 17,
+        '#811E9F': 18,
+        '#B44AC0': 19,
+        '#E4ABFF': 20,
+        '#DE107F': 21,
+        '#FF3881': 22,
+        '#FF99AA': 23,
+        '#6D482F': 24,
+        '#9C6926': 25,
+        '#FFB470': 26,
+        '#000000': 27,
+        '#515252': 28,
+        '#898D90': 29,
+        '#D4D7D9': 30,
+        '#FFFFFF': 31,
     };
 
     //Main code
@@ -49,10 +58,33 @@
         // function getPixel(x, y);
         // async function setPixel(x, y);
 
-        let menu = document.createElement("div");
-        menu.innerHTML = "<h>PLACEHOLDER<h>";
-        document.body.prepend(menu);
+        /*
+        const start = {x: 299, y: 343};
+        const end   = {x: 480, y: 450};
+        */
 
+        const start = {x: 299, y: 343};
+        const end   = {x: 299, y: 343};
+
+        const image = [[16]];
+
+        sleep(700);
+        while (true) {
+            for(let x = start.x; x <= end.x; x++) {
+                for(let y = start.y; y <= end.y; y++) {
+                    const selectedPixel = placeApi.getPixel(x, y);
+                    const matchingPixel = image[start.x-end.x][start.y-end.y];
+
+                    if(colorMap[selectedPixel] != matchingPixel) {
+                        await placeApi.setPixel(x, y, matchingPixel);
+                        await sleep((5+(Math.random()*5))*60000);
+                    }
+                    else {
+                        await sleep(randomInt(100, 250));
+                    }
+                }
+            }
+        }
     }
 
     //Sleep
