@@ -5,7 +5,7 @@ Status: Complete
 **Image Generator Executables:** linux_binary_executable, do not have a windows version yet ;(  
 **Image Generator Example Output:** From placeturkeywtext.png to placeturkeywtext.png.txt  
 
-Status: Broken
+Status: Broken  
 **Bot Code:** main.js
 
 # How to use the bot code:
